@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Jost', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    
+}
+body{
+    background: url('/bst/images/appleee.jpg') ;
+    background-size: cover;
+    
+}
+nav{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: aliceblue;
+    
+}
+#navbarcontent{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 30px;
+    color: aliceblue;
+    
+}
+.nav-link.active{
+    margin-right: -40px;
+}
+.nav-item{
+    margin-left:  50px;
+}
+.nav-item.dropdown{
+    position: relative;
+    display: inline-block;
+    margin-right: 40px;
+}
+.dropdown-menu{
+    display: block;
+    position: absolute;
+    background-color: blueviolet;
+    z-index: 1;
+    min-width: 260px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.nav-item.dropdown:hover .dropdown-menu{
+    display: block;
+    color: black;
+}
+.d-flex{
+    padding-right: 10px;
+}
+.icon{
+    margin-left: 20px;
+    font-size: 1.5em;
+    padding-right: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+section{
+   padding: 5% 10%;
+}
+.main-home{
+    width: 100%;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    height: 100vh;
+
+}
+
+.main-text h1{
+    color:rgb(255, 255, 255);
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+.main-text h5{
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 1.1;
+    margin: 20px 0 40px;
+}
+.main-btn{
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    font-size: 1.6em;
+    padding: 12px 25px;
+    font-weight: 500;
+    transition:all .6s ease;
+    text-transform: capitalize;
+    border-radius: 6px;
+}
+.main-btn:hover{
+    color: black;
+    background: rgb(255, 255, 255);
+}
+.main-btn:hover .arrow{
+    color: black;
+    background: rgb(255, 255, 255);
+}
+.main-btn .arrow{
+    transition: .6s ease;
+    color:whitesmoke;
+    border-radius: 50%;
+    margin-top: 100px;
+
+}
