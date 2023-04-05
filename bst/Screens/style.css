@@ -253,7 +253,7 @@ header{
 }
 .register p a:hover{
     text-decoration: underline;
-    color: greenyellow;
+    color: rgb(20, 188, 255);
 }
 .icons{
     font-size: .95em;
