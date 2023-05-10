@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in javaScript</title>
+</head>
+<body>
+    <img src="/images/k.png" alt="apple" width="200vw" id="img">
+    <h3 id="h3">Hello Friends</h3>
+    <script>
+        window.addEventListener("load",start,false);
+        function start()
+        {
+            document.getElementById('img').addEventListener("mouseover",change,false);
+            document.getElementById('h3').addEventListener("mouseout",outone,false);
+
+        }
+        function outone()
+        {
+            document.getElementById('h3').innerHTML="Welcome To Kec";
+        }
+        function change()
+        {
+            document.getElementById('img').setAttribute("src","/images/love.png");
+        }
+    </script>
+</body>
+</html>

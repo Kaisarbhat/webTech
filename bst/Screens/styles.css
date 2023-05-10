@@ -19,7 +19,7 @@ nav{
     color: aliceblue;
     
 }
-#navbarcontent{
+#navbarSupportedContent{
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -36,7 +36,7 @@ nav{
 .nav-item.dropdown{
     position: relative;
     display: inline-block;
-    margin-right: 40px;
+    margin-right: 10px;
 }
 .dropdown-menu{
     display: block;
