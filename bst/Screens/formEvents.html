@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM Events</title>
+    <style>
+        form{
+            width: 30vw;
+            border: 2px solid black;
+        }
+        div{
+            margin: 20px 40px ;  
+        }
+    </style>
+     <script>
+        window.addEventListener("load",start,false);
+        function start()
+        {
+            document.getElementById("email").addEventListener("focus",focusone,false);
+            document.getElementById("pwd").addEventListener("blur",blurone,false);
+            document.getElementById("sub").addEventListener("click",subone,false);
+            document.getElementById("res").addEventListener("click",resone,false);
+
+        }
+        function focusone(){
+            document.getElementById("help").innerHTML="Enter your name";
+        }
+        function blurone()
+        {
+            document.getElementById("help").innerText=" ";
+        }
+        function subone()
+        {
+            window.alert("Are You sure you want to submit");
+            window.alert("Thank You");
+        }
+        function resone(){
+            window.alert("Are you sure youy want to reset");
+            window.alert("Reset successful");
+        }
+        console.log("running");
+    </script>
+</head>
+<body>
+    <form action="">
+       <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+       </div>
+       <div> <label for="pwd">Password:</label>
+        <input type="password" name="pwd" id="pwd"></div>
+       <div> <label for="Phone">Phone :</label>
+        <input type="email" name="Phone" id="Phone"></div>
+       <div>
+        Gender:
+        <input type="radio" name="gen">Male
+        <input type="radio" name="gen">Female
+        <input type="radio" name="gen">Haram
+       </div>
+       <div>
+        Date of Birth :
+        <input type="date" name="dob" id="dob">
+       </div>
+       <div>
+        <input type="submit"  id="sub">
+        <input type="reset" id="res">
+       </div>
+       <p id="help"></p>
+    </form>
+   
+</body>
+</html>
