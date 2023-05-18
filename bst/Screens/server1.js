@@ -11,9 +11,9 @@ http.createServer(function(request, response) {
             console.log(name);
             var email = querystring.parse(data1)["email"];
             console.log(email);
-            if (request.url === '/login') {
+            if (request.url === '/Screens/login') {
                 module.authenticateUser(name, email, response);
-            } else if (request.url === '/save') {
+            } else if (request.url === '/Screens/save') {
                 module.saveUser(name, email, response);
             } else {
                 console.log("In else");
