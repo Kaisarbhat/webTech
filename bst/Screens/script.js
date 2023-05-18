@@ -17,9 +17,9 @@ btnPopup.addEventListener('click',()=>{
 iconClose.addEventListener('click',()=>{
     wrapper.classList.remove('active-popup');
 });
-const form = document.querySelector('form');
-const emailField = form.querySelector('input[type="email"]');
-const passwordField = form.querySelector('input[type="password"]');
+const form = document.querySelector('myForm');
+const name = document.forms["myForm"]["name"].value;
+const email = document.forms["myForm"]["email"].value;
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -33,11 +33,12 @@ form.addEventListener('submit', (event) => {
     return;
   }
 
+
   form.submit();
 });
 
 function isValidEmail(email) {
-  const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
