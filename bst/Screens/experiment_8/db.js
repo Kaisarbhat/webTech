@@ -1,10 +1,20 @@
+
+
 const mongoose = require('mongoose');
-const mongoURI="mongodb://localhost:27017/inotebook?directConnection=true";
 
-const connectToMongo = ()=>{
-    mongoose.connect (mongoURI,()=>{
-        console.log('connected to database');
+// Define MongoDB connection URL
+const mongoDBUrl = 'mongodb://localhost:27017/?directConnection=true';
+
+// Connect to MongoDB
+mongoose.connect(mongoDBUrl, { 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true 
 })
-}
+  .then(() => {
+    console.log('Connected to MongoDB');
+  })
+  .catch(error => {
+    console.error('Error connecting to MongoDB:', error);
+  });
 
-module.exports=connectToMongo;
+module.exports = mongoose;
